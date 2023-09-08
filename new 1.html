@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的视频网站</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        #videoPlayer {
+            width: 80%;
+            margin: 50px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #adminPanel {
+            display: none;  /* 默认隐藏，需要后端逻辑来显示给管理员 */
+            margin-top: 50px;
+            text-align: center;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>我的视频网站</h1>
+</header>
+
+<!-- 视频播放区域 -->
+<div id="videoPlayer">
+    <video width="100%" controls>
+        <source src="path_to_video.mp4" type="video/mp4">
+        您的浏览器不支持视频标签。
+    </video>
+</div>
+
+<!-- 上传视频的表单 -->
+<div id="adminPanel">
+    <h2>管理员面板</h2>
+    <form action="path_to_backend_logic" method="post" enctype="multipart/form-data">
+        选择视频上传：
+        <input type="file" name="videoFile" accept="video/*">
+        <input type="submit" value="上传视频" name="submit">
+    </form>
+</div>
+
+<script>
+    // 这里可以添加一些JavaScript逻辑，例如检查用户是否为管理员，然后显示上传表单。
+</script>
+
+</body>
+</html>
